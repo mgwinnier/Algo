@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import argparse
 
 def scrape_ncaa_scores_to_excel(url, output_file):
     headers = {
@@ -38,6 +39,27 @@ def scrape_ncaa_scores_to_excel(url, output_file):
                 team_name = team_name.replace('N.M.', 'New Mexico')
                 team_name = team_name.replace('N.C.', 'North Carolina')
                 team_name = team_name.replace('Ark.', 'Arkansas')
+                team_name = team_name.replace('UIW', 'Incarnate Word')
+                team_name = team_name.replace('Ala.', 'Alabama')
+                team_name = team_name.replace('So.', 'Southern')
+                team_name = team_name.replace('FIU', 'Florida International')
+                team_name = team_name.replace('LSU', 'Louisiana State')
+                team_name = team_name.replace('BYU', 'Brigham Young')
+                team_name = team_name.replace('UNLV', 'Nevada-Las Vegas')
+                team_name = team_name.replace('Seattle U', 'Seattle')
+                team_name = team_name.replace('Miss.', 'Mississippi')
+                team_name = team_name.replace('McNeese', 'McNeese State')
+                team_name = team_name.replace('App State', 'Appalachian State')
+                team_name = team_name.replace('Queens (NC)', 'Queens')
+                team_name = team_name.replace('VCU', 'Virginia Commonwealth')
+                team_name = team_name.replace('Alcorn', 'Alcorn State')
+                team_name = team_name.replace('Col.', 'College')
+                team_name = team_name.replace('Miami (FL)', 'Miami')
+                team_name = team_name.replace('Ole Miss', 'Mississippi')
+                team_name = team_name.replace('UCF', 'Central Florida')
+                team_name = team_name.replace('Saint Francis (PA)', 'Saint Francis')
+                team_name = team_name.replace('ETSU', 'East Tennessee State')
+                team_name = team_name.replace('SIUE', 'SIU Edwardsville')
                 team_names.append(team_name)
                 team_scores.append(score.text.strip())
 
@@ -51,21 +73,22 @@ def scrape_ncaa_scores_to_excel(url, output_file):
         scores_df.to_excel(output_file, index=False)
         
         # Return the path to the saved Excel file
-        return output_file
+parser = argparse.ArgumentParser(description='Scrape NCAA Scores to Excel')
+parser.add_argument('dates', nargs='+', help='Dates for the scores in YYYY/MM/DD format')
+args = parser.parse_args()
+
+base_url = 'https://www.ncaa.com/scoreboard/basketball-men/d1'
+
+for date in args.dates:
+    formatted_date = date.replace('/', '/')
+    url = f'{base_url}/{formatted_date}/all-conf'
+
+    # Create a unique output file name for each date
+    output_file = f'results-{date.replace("/", "-")}.xlsx'
+
+    # Call the function and print the result
+    result = scrape_ncaa_scores_to_excel(url, output_file)
+    if result:
+        print(f'Saved Excel file at: {result}')
     else:
-        # Print the error and return None
-        print(f"Failed to retrieve data. Status code: {response.status_code}")
-        return None
-
-# Example usage:
-# Replace 'url_to_ncaa_scoreboard' with the actual URL you wish to scrape
-# Replace 'path_to_output_excel_file' with the desired path for your Excel file
-url_to_ncaa_scoreboard = 'https://www.ncaa.com/scoreboard/basketball-men/d1/2023/12/12'
-path_to_output_excel_file = 'scores.xlsx'
-
-# Call the function and print the result
-result = scrape_ncaa_scores_to_excel(url_to_ncaa_scoreboard, path_to_output_excel_file)
-if result:
-    print(f'Saved Excel file at: {result}')
-else:
-    print('Failed to save Excel file.')
+        print(f'Failed to save Excel file for {date}.')

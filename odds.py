@@ -1,8 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
+import argparse
+from datetime import datetime
 
-def scrape_odds_to_excel(url, output_file):
+def scrape_odds_to_excel(date, output_file):
+    # Format the URL to include the date parameter
+    url = f'https://www.vegasinsider.com/college-basketball/odds/las-vegas/?date={date}'
+    
     # Send a GET request to the page
     response = requests.get(url)
 
@@ -10,6 +15,7 @@ def scrape_odds_to_excel(url, output_file):
     if response.status_code == 200:
         # Parse the content with BeautifulSoup
         soup = BeautifulSoup(response.content, 'html.parser')
+        
         
         # Initialize lists to hold the extracted team names and odds
         top_team_names = []
@@ -70,5 +76,13 @@ def scrape_odds_to_excel(url, output_file):
     else:
         print(f'Failed to retrieve the page with status code: {response.status_code}')
 
-# Call the function with the specified URL and output file path
-scrape_odds_to_excel('https://www.vegasinsider.com/college-basketball/odds/las-vegas/', 'Odds.xlsx')
+parser = argparse.ArgumentParser(description='Scrape NCAA Odds to Excel')
+parser.add_argument('date', type=lambda s: datetime.strptime(s, '%Y-%m-%d'), help='Date for the odds in YYYY-MM-DD format')
+args = parser.parse_args()
+
+# Define the output file name based on the provided date
+output_file_name = f"Odds-{args.date.strftime('%Y-%m-%d')}.xlsx"
+
+# Call the function with the specified date and output file path
+scrape_odds_to_excel(args.date.strftime('%Y-%m-%d'), output_file_name)
+

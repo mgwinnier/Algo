@@ -1,9 +1,11 @@
-from odds import scrape_odds_to_excel
 import pandas as pd
+import argparse
+from datetime import datetime
+from odds import scrape_odds_to_excel
 
-def parse_data_from_file(file_path):
-
-    scrape_odds_to_excel('https://www.vegasinsider.com/college-basketball/odds/las-vegas/', 'Odds.xlsx')
+def parse_data_from_file(file_path, date):
+    odds_filename = f"odds-{date}.xlsx"
+    scrape_odds_to_excel(date, odds_filename)
 
     with open(file_path, 'r') as file:
         data = file.read()
@@ -65,24 +67,30 @@ def parse_data_from_file(file_path):
             print("Error details:", e)
 
     df = pd.DataFrame(results)
-    
-    # Add revised VLOOKUP formula to the new DataFrame
+
+    # Add VLOOKUP formula to the new DataFrame
     for index, row in df.iterrows():
         excel_row = index + 2  # Excel rows start at 1 and headers take 1 row
         if row['Home/Away'] == "Away":
-            df.at[index, 'Vegas Spread'] = f'=IFERROR(VLOOKUP(C{excel_row},[odds.xlsx]Sheet1!$A:$B,2,FALSE), G{excel_row+1}*-1)'
+            df.at[index, 'Vegas Spread'] = f'=IFERROR(VLOOKUP(C{excel_row},\'[odds-{date}.xlsx]Sheet1\'!$A:$B,2,FALSE), G{excel_row+1}*-1)'
         else:
-            df.at[index, 'Vegas Spread'] = f'=IFERROR(VLOOKUP(C{excel_row},[odds.xlsx]Sheet1!$A:$B,2,FALSE), G{excel_row-1}*-1)'
+            df.at[index, 'Vegas Spread'] = f'=IFERROR(VLOOKUP(C{excel_row},\'[odds-{date}.xlsx]Sheet1\'!$A:$B,2,FALSE), G{excel_row-1}*-1)'
 
+    processed_filename = f"processed_data-{date}.xlsx"
     if not df.empty:
         # Save to Excel with the formula
-        with pd.ExcelWriter('processed_data.xlsx', engine='openpyxl') as writer:
+        with pd.ExcelWriter(processed_filename, engine='openpyxl') as writer:
             df.to_excel(writer, index=False)
-            print("Excel file created successfully.")
+            print(f"Excel file '{processed_filename}' created successfully.")
     else:
         print("No data to save to Excel.")
 
     return df
 
 # Assuming the 'data.txt' is in the same directory as this script
-parse_data_from_file("data.txt")
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Parse data and scrape odds')
+    parser.add_argument('date', type=lambda s: datetime.strptime(s, '%Y-%m-%d').date(), help='Date for the odds in YYYY-MM-DD format')
+    args = parser.parse_args()
+
+    parse_data_from_file("data.txt", args.date.strftime('%Y-%m-%d'))
