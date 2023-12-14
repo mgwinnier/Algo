@@ -76,13 +76,3 @@ def scrape_odds_to_excel(date, output_file):
     else:
         print(f'Failed to retrieve the page with status code: {response.status_code}')
 
-parser = argparse.ArgumentParser(description='Scrape NCAA Odds to Excel')
-parser.add_argument('date', type=lambda s: datetime.strptime(s, '%Y-%m-%d'), help='Date for the odds in YYYY-MM-DD format')
-args = parser.parse_args()
-
-# Define the output file name based on the provided date
-output_file_name = f"Odds-{args.date.strftime('%Y-%m-%d')}.xlsx"
-
-# Call the function with the specified date and output file path
-scrape_odds_to_excel(args.date.strftime('%Y-%m-%d'), output_file_name)
-

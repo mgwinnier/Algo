@@ -1,7 +1,9 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import argparse
+from datetime import datetime
 
 def scrape_ncaa_scores_to_excel(url, output_file):
     headers = {
@@ -73,6 +75,8 @@ def scrape_ncaa_scores_to_excel(url, output_file):
         scores_df.to_excel(output_file, index=False)
         
         # Return the path to the saved Excel file
+        return output_file
+
 parser = argparse.ArgumentParser(description='Scrape NCAA Scores to Excel')
 parser.add_argument('dates', nargs='+', help='Dates for the scores in YYYY/MM/DD format')
 args = parser.parse_args()
@@ -83,8 +87,13 @@ for date in args.dates:
     formatted_date = date.replace('/', '/')
     url = f'{base_url}/{formatted_date}/all-conf'
 
-    # Create a unique output file name for each date
-    output_file = f'results-{date.replace("/", "-")}.xlsx'
+    # Create a directory for the date
+    directory_name = f'./{date.replace("/", "-")}'
+    if not os.path.exists(directory_name):
+        os.makedirs(directory_name)
+
+    # Create a unique output file name for each date within the directory
+    output_file = os.path.join(directory_name, f'results-{date.replace("/", "-")}.xlsx')
 
     # Call the function and print the result
     result = scrape_ncaa_scores_to_excel(url, output_file)

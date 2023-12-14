@@ -1,10 +1,17 @@
+import os
 import pandas as pd
-import argparse
 from datetime import datetime
 from odds import scrape_odds_to_excel
+import argparse
 
 def parse_data_from_file(file_path, date):
-    odds_filename = f"odds-{date}.xlsx"
+    # Create a directory with the date as its name
+    directory_name = f'./{date}'
+    if not os.path.exists(directory_name):
+        os.makedirs(directory_name)
+
+    # The file paths now include the directory
+    odds_filename = os.path.join(directory_name, f"odds-{date}.xlsx")
     scrape_odds_to_excel(date, odds_filename)
 
     with open(file_path, 'r') as file:
@@ -76,9 +83,10 @@ def parse_data_from_file(file_path, date):
         else:
             df.at[index, 'Vegas Spread'] = f'=IFERROR(VLOOKUP(C{excel_row},\'[odds-{date}.xlsx]Sheet1\'!$A:$B,2,FALSE), G{excel_row-1}*-1)'
 
-    processed_filename = f"processed_data-{date}.xlsx"
+    processed_filename = os.path.join(directory_name, f"processed_data-{date}.xlsx")
+
     if not df.empty:
-        # Save to Excel with the formula
+        # Save to Excel within the new directory
         with pd.ExcelWriter(processed_filename, engine='openpyxl') as writer:
             df.to_excel(writer, index=False)
             print(f"Excel file '{processed_filename}' created successfully.")
@@ -87,7 +95,6 @@ def parse_data_from_file(file_path, date):
 
     return df
 
-# Assuming the 'data.txt' is in the same directory as this script
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Parse data and scrape odds')
     parser.add_argument('date', type=lambda s: datetime.strptime(s, '%Y-%m-%d').date(), help='Date for the odds in YYYY-MM-DD format')
