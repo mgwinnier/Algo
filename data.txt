@@ -1,219 +1,579 @@
 ##############################
 
-Northern Colorado (8)
+Hampton (7)
 
-Texas A&M-Commerce (10)
+Maryland-Eastern Shore (6)
 
-eFG diff rating in favor of: Texas A&M-Commerce by 0.008
-
-----------
-
-Northern Colorado: 70.781
-
-Texas A&M-Commerce: 69.816
+eFG diff rating in favor of: Hampton by 0.076
 
 ----------
 
-SRS factored in Northern Colorado rating: 62.611
+Hampton: 77.706
 
-SRS factored in Texas A&M-Commerce rating: 58.016
+Maryland-Eastern Shore: 64.202
+
+----------
+
+SRS factored in Hampton rating: 62.566
+
+SRS factored in Maryland-Eastern Shore rating: 48.642
 
 ##############################
 
-Columbia (10)
+St. Thomas (7)
 
-Fairleigh Dickinson (11)
+Western Michigan (6)
 
-eFG diff rating in favor of: Columbia by 0.009
-
-----------
-
-Columbia: 75.444
-
-Fairleigh Dickinson: 79.466
+eFG diff rating in favor of: St. Thomas by 0.004
 
 ----------
 
-SRS factored in Columbia rating: 73.294
+St. Thomas: 67.922
 
-SRS factored in Fairleigh Dickinson rating: 63.706
+Western Michigan: 65.462
+
+----------
+
+SRS factored in St. Thomas rating: 62.302
+
+SRS factored in Western Michigan rating: 63.352
 
 ##############################
 
-Stonehill (11)
+College of Charleston (6)
 
-New Hampshire (10)
+Liberty (7)
 
-eFG diff rating in favor of: New Hampshire by 0.034
-
-----------
-
-Stonehill: 64.107
-
-New Hampshire: 75.798
+eFG diff rating in favor of: Liberty by 0.153
 
 ----------
 
-SRS factored in Stonehill rating: 42.097
+College of Charleston: 62.589
 
-SRS factored in New Hampshire rating: 72.958
+Liberty: 83.607
+
+----------
+
+SRS factored in College of Charleston rating: 60.599
+
+SRS factored in Liberty rating: 99.767
 
 ##############################
 
-Howard (8)
+Houston (7)
 
-Pennsylvania (11)
+Xavier (7)
 
-eFG diff rating in favor of: Pennsylvania by 0.066
-
-----------
-
-Howard: 69.937
-
-Pennsylvania: 80.3
+eFG diff rating in favor of: Xavier by 0.006
 
 ----------
 
-SRS factored in Howard rating: 66.997
+Houston: 67.429
 
-SRS factored in Pennsylvania rating: 80.98
+Xavier: 73.506
+
+----------
+
+SRS factored in Houston rating: 95.229
+
+SRS factored in Xavier rating: 89.986
 
 ##############################
 
-Yale (11)
+George Washington (7)
 
-Quinnipiac (9)
+South Carolina (6)
 
-eFG diff rating in favor of: Yale by 0.016
-
-----------
-
-Yale: 72.408
-
-Quinnipiac: 72.605
+eFG diff rating in favor of: South Carolina by 0.001
 
 ----------
 
-SRS factored in Yale rating: 73.038
+George Washington: 81.182
 
-SRS factored in Quinnipiac rating: 63.745
+South Carolina: 74.007
+
+----------
+
+SRS factored in George Washington rating: 92.662
+
+SRS factored in South Carolina rating: 83.007
 
 ##############################
 
-Jacksonville (9)
+Norfolk State (8)
 
-South Carolina State (9)
+Virginia Commonwealth (7)
 
-eFG diff rating in favor of: Jacksonville by 0.069
-
-----------
-
-Jacksonville: 74.248
-
-South Carolina State: 64.016
+eFG diff rating in favor of: Virginia Commonwealth by 0.037
 
 ----------
 
-SRS factored in Jacksonville rating: 60.878
+Norfolk State: 70.111
 
-SRS factored in South Carolina State rating: 46.986
+Virginia Commonwealth: 68.662
+
+----------
+
+SRS factored in Norfolk State rating: 66.291
+
+SRS factored in Virginia Commonwealth rating: 81.912
 
 ##############################
 
-Delaware (9)
+Bryant (8)
 
-Robert Morris (9)
+Brown (8)
 
-eFG diff rating in favor of: Delaware by 0.067
-
-----------
-
-Delaware: 77.071
-
-Robert Morris: 63.732
+eFG diff rating in favor of: Bryant by 0.052
 
 ----------
 
-SRS factored in Delaware rating: 80.841
+Bryant: 83.431
 
-SRS factored in Robert Morris rating: 55.842
+Brown: 68.746
+
+----------
+
+SRS factored in Bryant rating: 82.151
+
+SRS factored in Brown rating: 64.966
 
 ##############################
 
-Alabama A&M (8)
+St. John's (NY) (6)
 
-Samford (9)
+West Virginia (6)
 
-eFG diff rating in favor of: Samford by 0.153
-
-----------
-
-Alabama A&M: 55.034
-
-Samford: 85.726
+eFG diff rating in favor of: St. John's (NY) by 0.088
 
 ----------
 
-SRS factored in Alabama A&M rating: 36.004
+St. John's (NY): 74.12
 
-SRS factored in Samford rating: 89.216
+West Virginia: 56.556
+
+----------
+
+SRS factored in St. John's (NY) rating: 85.51
+
+SRS factored in West Virginia rating: 60.676
 
 ##############################
 
-Mississippi Valley State (9)
+Quinnipiac (6)
 
-Gonzaga (9)
+Canisius (7)
 
-eFG diff rating in favor of: Gonzaga by 0.169
-
-----------
-
-Mississippi Valley State: 48.157
-
-Gonzaga: 85.603
+eFG diff rating in favor of: Quinnipiac by 0.018
 
 ----------
 
-SRS factored in Mississippi Valley State rating: 19.687
+Quinnipiac: 81.313
 
-SRS factored in Gonzaga rating: 102.743
+Canisius: 77.312
+
+----------
+
+SRS factored in Quinnipiac rating: 75.533
+
+SRS factored in Canisius rating: 76.292
 
 ##############################
 
-Utah Tech (9)
+Rider (6)
 
-Cal State Northridge (9)
+Siena (6)
 
-eFG diff rating in favor of: Cal State Northridge by 0.013
-
-----------
-
-Utah Tech: 70.704
-
-Cal State Northridge: 79.25
+eFG diff rating in favor of: Siena by 0.025
 
 ----------
 
-SRS factored in Utah Tech rating: 66.074
+Rider: 65.622
 
-SRS factored in Cal State Northridge rating: 71.39
+Siena: 59.541
+
+----------
+
+SRS factored in Rider rating: 55.682
+
+SRS factored in Siena rating: 32.281
 
 ##############################
 
-New Orleans (9)
+Saint Peter's (5)
 
-San Francisco (9)
+Niagara (4)
 
-eFG diff rating in favor of: San Francisco by 0.09
-
-----------
-
-New Orleans: 71.306
-
-San Francisco: 77.707
+eFG diff rating in favor of: Niagara by 0.122
 
 ----------
 
-SRS factored in New Orleans rating: 58.516
+Saint Peter's: 51.227
 
-SRS factored in San Francisco rating: 89.407
+Niagara: 73.382
+
+----------
+
+SRS factored in Saint Peter's rating: 43.967
+
+SRS factored in Niagara rating: 60.472
+
+##############################
+
+Mount St. Mary's (5)
+
+Manhattan (6)
+
+eFG diff rating in favor of: Mount St. Mary's by 0.001
+
+----------
+
+Mount St. Mary's: 63.822
+
+Manhattan: 66.697
+
+----------
+
+SRS factored in Mount St. Mary's rating: 53.872
+
+SRS factored in Manhattan rating: 54.927
+
+##############################
+
+Maryland (7)
+
+Indiana (6)
+
+eFG diff rating in favor of: Indiana by 0.072
+
+----------
+
+Maryland: 63.244
+
+Indiana: 75.85
+
+----------
+
+SRS factored in Maryland rating: 67.964
+
+SRS factored in Indiana rating: 80.34
+
+##############################
+
+Mercer (6)
+
+Georgia (7)
+
+eFG diff rating in favor of: Mercer by 0.035
+
+----------
+
+Mercer: 65.964
+
+Georgia: 65.5
+
+----------
+
+SRS factored in Mercer rating: 57.924
+
+SRS factored in Georgia rating: 70.86
+
+##############################
+
+Iona (7)
+
+Fairfield (6)
+
+eFG diff rating in favor of: Iona by 0.022
+
+----------
+
+Iona: 72.829
+
+Fairfield: 69.321
+
+----------
+
+SRS factored in Iona rating: 68.639
+
+SRS factored in Fairfield rating: 57.811
+
+##############################
+
+Incarnate Word (7)
+
+Bethune-Cookman (7)
+
+eFG diff rating in favor of: Incarnate Word by 0.029
+
+----------
+
+Incarnate Word: 76.032
+
+Bethune-Cookman: 72.786
+
+----------
+
+SRS factored in Incarnate Word rating: 65.112
+
+SRS factored in Bethune-Cookman rating: 51.246
+
+##############################
+
+Arkansas State (7)
+
+Little Rock (7)
+
+eFG diff rating in favor of: Little Rock by 0.001
+
+----------
+
+Arkansas State: 70.956
+
+Little Rock: 73.512
+
+----------
+
+SRS factored in Arkansas State rating: 64.536
+
+SRS factored in Little Rock rating: 75.482
+
+##############################
+
+Southeastern Louisiana (7)
+
+Louisiana State (7)
+
+eFG diff rating in favor of: Louisiana State by 0.018
+
+----------
+
+Southeastern Louisiana: 71.217
+
+Louisiana State: 70.941
+
+----------
+
+SRS factored in Southeastern Louisiana rating: 62.057
+
+SRS factored in Louisiana State rating: 75.261
+
+##############################
+
+South Dakota State (7)
+
+Towson (7)
+
+eFG diff rating in favor of: South Dakota State by 0.107
+
+----------
+
+South Dakota State: 77.276
+
+Towson: 52.068
+
+----------
+
+SRS factored in South Dakota State rating: 75.096
+
+SRS factored in Towson rating: 47.968
+
+##############################
+
+Southern Mississippi (7)
+
+UAB (7)
+
+eFG diff rating in favor of: UAB by 0.004
+
+----------
+
+Southern Mississippi: 62.212
+
+UAB: 62.913
+
+----------
+
+SRS factored in Southern Mississippi rating: 49.752
+
+SRS factored in UAB rating: 66.083
+
+##############################
+
+Iowa State (7)
+
+DePaul (6)
+
+eFG diff rating in favor of: Iowa State by 0.027
+
+----------
+
+Iowa State: 74.771
+
+DePaul: 68.887
+
+----------
+
+SRS factored in Iowa State rating: 98.291
+
+SRS factored in DePaul rating: 68.197
+
+##############################
+
+SIU Edwardsville (8)
+
+Troy (7)
+
+eFG diff rating in favor of: SIU Edwardsville by 0.014
+
+----------
+
+SIU Edwardsville: 68.656
+
+Troy: 72.288
+
+----------
+
+SRS factored in SIU Edwardsville rating: 62.016
+
+SRS factored in Troy rating: 62.398
+
+##############################
+
+Connecticut (7)
+
+Kansas (7)
+
+eFG diff rating in favor of: Kansas by 0.019
+
+----------
+
+Connecticut: 82.748
+
+Kansas: 84.319
+
+----------
+
+SRS factored in Connecticut rating: 103.918
+
+SRS factored in Kansas rating: 105.159
+
+##############################
+
+Purdue (7)
+
+Northwestern (6)
+
+eFG diff rating in favor of: Purdue by 0.056
+
+----------
+
+Purdue: 81.326
+
+Northwestern: 66.472
+
+----------
+
+SRS factored in Purdue rating: 112.466
+
+SRS factored in Northwestern rating: 77.372
+
+##############################
+
+North Dakota (7)
+
+Cal State Fullerton (6)
+
+eFG diff rating in favor of: North Dakota by 0.045
+
+----------
+
+North Dakota: 75.87
+
+Cal State Fullerton: 64.121
+
+----------
+
+SRS factored in North Dakota rating: 64.45
+
+SRS factored in Cal State Fullerton rating: 54.891
+
+##############################
+
+Wyoming (6)
+
+Portland (7)
+
+eFG diff rating in favor of: Portland by 0.01
+
+----------
+
+Wyoming: 76.202
+
+Portland: 82.657
+
+----------
+
+SRS factored in Wyoming rating: 75.612
+
+SRS factored in Portland rating: 80.757
+
+##############################
+
+Fresno State (6)
+
+Brigham Young (6)
+
+eFG diff rating in favor of: Brigham Young by 0.056
+
+----------
+
+Fresno State: 72.049
+
+Brigham Young: 88.051
+
+----------
+
+SRS factored in Fresno State rating: 64.869
+
+SRS factored in Brigham Young rating: 117.441
+
+##############################
+
+San Diego State (7)
+
+UC San Diego (7)
+
+eFG diff rating in favor of: UC San Diego by 0.018
+
+----------
+
+San Diego State: 71.186
+
+UC San Diego: 74.141
+
+----------
+
+SRS factored in San Diego State rating: 90.606
+
+SRS factored in UC San Diego rating: 71.501
+
+##############################
+
+Boise State (6)
+
+Saint Mary's (CA) (7)
+
+eFG diff rating in favor of: Saint Mary's (CA) by 0.024
+
+----------
+
+Boise State: 63.589
+
+Saint Mary's (CA): 64.451
+
+----------
+
+SRS factored in Boise State rating: 72.439
+
+SRS factored in Saint Mary's (CA) rating: 77.281
