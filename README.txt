@@ -6,3 +6,5 @@ Steps:
 4) This will modify "processed data" excel file with all the team names and the vegas spread when available for that game
 5) To get scores run results.py make sure to put the date of the scores you want to pull by modifying the follwing URL:
 https://www.ncaa.com/scoreboard/basketball-men/d1/2023/12/12
+
+Odds.py will pull the odds of the games of the day you run it, if you would like odds from a different day you will need to modify url input with https://www.vegasinsider.com/college-basketball/odds/las-vegas/ link to that days odds.
